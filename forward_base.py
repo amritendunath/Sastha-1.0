@@ -43,9 +43,13 @@ class ForwardChain:
         
         self.variable_initialized_list = self.variable_initializer(self.clause_variable_list)
         
-    def variable_initializer(variable_list):
-        temp_var_initializer = []
-        for variable in variable_list:
-            temp_pair=(variable, "")
-            temp_var_initializer.append(temp_pair)
-        return temp_var_initializer  
+    # def variable_initializer(variable_list):
+    #     temp_var_initializer = []
+    #     for variable in variable_list:
+    #         temp_pair=(variable, "")
+    #         temp_var_initializer.append(temp_pair)
+    #     return temp_var_initializer  
+    
+    # Short form of the above
+    def variable_initializer(self, variable_list):
+        return [(variable, "") for variable in variable_list]
