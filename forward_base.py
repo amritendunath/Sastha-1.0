@@ -31,3 +31,12 @@ class ForwardChain:
             {"NARROWED", "ELEVATED", "CLOT"},
             {"HIGH", "CLOT"},{"INCREASED", "CLOT"},
             {"INCREASED", "BLOCKAGE"}}
+        self.ailment_condition_treatment = {
+            {{clause_variable_list[0], "HIGH"}, "ACE-INHIBITOR / ARB BLOCKERS"},
+            {{clause_variable_list[1], "COLLECTED"}, "DIURETICS / ALDOSTERONE ANTAGONISTS"},
+            {{clause_variable_list[2], "INFLAMED"}, "CORTICOSTEROIDS"},
+            {{clause_variable_list[3], "REDUCED"}, "ACE INHIBITOR / ANGIOTENSIN II RECEPTOR BLOCKERS"},
+            {{clause_variable_list[4], "NARROWED"}, "NITRATES"},
+            {{clause_variable_list[5], "ELEVATED"}, "STATIN"},
+            {{clause_variable_list[6], "CLOT"}, "CLOT PREVENTING DRUGS (CLOPIDOGREL, TICAGRELOR) OR ASPIRIN"},
+            {{clause_variable_list[7], "INCREASED"}, "VAGAL MANEUVER"}}
