@@ -22,8 +22,6 @@ class ForwardChain:
                                                "NITRATES/ OPEN HEART SURGERY"]                           
         self.diagnosis_list=["Heart Failure", "Cardiomyopathy", "Angina",
                             "Coronary Artery Disease", "Tachycardia", "Ventricular Tachycardia"]
-
-
-
-
-
+     
+        self.diagnosis_ailment = [{0, {0, 1}}, {1, {2, 3}}, {2, {4, 5, 6}}, {3, {0, 6}}, 
+                         {4, {6, 7}}, {7, {7, 8}}]
