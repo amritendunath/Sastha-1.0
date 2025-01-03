@@ -20,8 +20,10 @@ class ForwardChain:
                                                "CLOT PREVENTING DRUGS ( CLOPIDOGREL, TICAGRELOR)/ ASPIRIN",
                                                "ANTI-ARRYTHMIC DRUGS",
                                                "NITRATES/ OPEN HEART SURGERY"]                           
-    
-        
+        self.diagnosis_list=["Heart Failure", "Cardiomyopathy", "Angina",
+                            "Coronary Artery Disease", "Tachycardia", "Ventricular Tachycardia"]
+
+
 
 
 
