@@ -25,3 +25,9 @@ class ForwardChain:
      
         self.diagnosis_ailment = [{0, {0, 1}}, {1, {2, 3}}, {2, {4, 5, 6}}, {3, {0, 6}}, 
                          {4, {6, 7}}, {7, {7, 8}}]
+        self.ailment_condition = {
+            {"HIGH", "COLLECTED"},
+            {"INFLAMED", "REDUCED"},
+            {"NARROWED", "ELEVATED", "CLOT"},
+            {"HIGH", "CLOT"},{"INCREASED", "CLOT"},
+            {"INCREASED", "BLOCKAGE"}}
