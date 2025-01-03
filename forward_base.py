@@ -25,18 +25,20 @@ class ForwardChain:
      
         self.diagnosis_ailment = [{0, {0, 1}}, {1, {2, 3}}, {2, {4, 5, 6}}, {3, {0, 6}}, 
                          {4, {6, 7}}, {7, {7, 8}}]
-        self.ailment_condition = {
+        self.ailment_condition = [
             {"HIGH", "COLLECTED"},
             {"INFLAMED", "REDUCED"},
             {"NARROWED", "ELEVATED", "CLOT"},
             {"HIGH", "CLOT"},{"INCREASED", "CLOT"},
-            {"INCREASED", "BLOCKAGE"}}
-        self.ailment_condition_treatment = {
-            {{clause_variable_list[0], "HIGH"}, "ACE-INHIBITOR / ARB BLOCKERS"},
-            {{clause_variable_list[1], "COLLECTED"}, "DIURETICS / ALDOSTERONE ANTAGONISTS"},
-            {{clause_variable_list[2], "INFLAMED"}, "CORTICOSTEROIDS"},
-            {{clause_variable_list[3], "REDUCED"}, "ACE INHIBITOR / ANGIOTENSIN II RECEPTOR BLOCKERS"},
-            {{clause_variable_list[4], "NARROWED"}, "NITRATES"},
-            {{clause_variable_list[5], "ELEVATED"}, "STATIN"},
-            {{clause_variable_list[6], "CLOT"}, "CLOT PREVENTING DRUGS (CLOPIDOGREL, TICAGRELOR) OR ASPIRIN"},
-            {{clause_variable_list[7], "INCREASED"}, "VAGAL MANEUVER"}}
+            {"INCREASED", "BLOCKAGE"}]
+        self.ailment_condition_treatment = [
+            {{self.clause_variable_list[0], "HIGH"}, "ACE-INHIBITOR / ARB BLOCKERS"},
+            {{self.clause_variable_list[1], "COLLECTED"}, "DIURETICS / ALDOSTERONE ANTAGONISTS"},
+            {{self.clause_variable_list[2], "INFLAMED"}, "CORTICOSTEROIDS"},
+            {{self.clause_variable_list[3], "REDUCED"}, "ACE INHIBITOR / ANGIOTENSIN II RECEPTOR BLOCKERS"},
+            {{self.clause_variable_list[4], "NARROWED"}, "NITRATES"},
+            {{self.clause_variable_list[5], "ELEVATED"}, "STATIN"},
+            {{self.clause_variable_list[6], "CLOT"}, "CLOT PREVENTING DRUGS (CLOPIDOGREL, TICAGRELOR) OR ASPIRIN"},
+            {{self.clause_variable_list[7], "INCREASED"}, "VAGAL MANEUVER"}]
+        
+        self.variable_initialized_list = self.variable_initializer(self.clause_variable_list)
