@@ -42,3 +42,10 @@ class ForwardChain:
             {{self.clause_variable_list[7], "INCREASED"}, "VAGAL MANEUVER"}]
         
         self.variable_initialized_list = self.variable_initializer(self.clause_variable_list)
+        
+    def variable_initializer(variable_list):
+        temp_var_initializer = []
+        for variable in variable_list:
+            temp_pair=(variable, "")
+            temp_var_initializer.append(temp_pair)
+        return temp_var_initializer  
