@@ -23,8 +23,13 @@ class ForwardChain:
         self.diagnosis_list=["Heart Failure", "Cardiomyopathy", "Angina",
                             "Coronary Artery Disease", "Tachycardia", "Ventricular Tachycardia"]
      
-        self.diagnosis_ailment = [{0, {0, 1}}, {1, {2, 3}}, {2, {4, 5, 6}}, {3, {0, 6}}, 
-                         {4, {6, 7}}, {7, {7, 8}}]
+        self.diagnosis_ailment = [
+            {0, {0, 1}}, 
+            {1, {2, 3}}, 
+            {2, {4, 5, 6}}, 
+            {3, {0, 6}},
+            {4, {6, 7}}, 
+            {7, {7, 8}}]
         self.ailment_condition = [
             {"HIGH", "COLLECTED"},
             {"INFLAMED", "REDUCED"},
