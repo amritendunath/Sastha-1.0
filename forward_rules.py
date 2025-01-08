@@ -26,6 +26,20 @@ class ForwardRules:
                     variable_initialized[1]= self.chain_forward.ailment_condition[diagnosis_index][ailment_number]
                     self.chain_forward.variable_initialized_list[ailment_number] = tuple(variable_initialized)
                     self.variable_initialized_queue.put(self.chain_forward.variable_initialized_list[ailment_number])
-                            
+
+
+        def apply_forward_chain(self):
+            while not self.variable_initialized_queue.empty():
+                varible = self.variable_initialized_queue.get()       
+
+                for ailment_condition_treat in self.chain_forward.ailment_condition_treatment:
+                    ailment_condition = ailment_condition_treat[0]
+
+                    if varible[0] == ailment_condition[0]:
+                        output_print = f"\n\nThe patient might have {varible[0]}"
+                        treatment_print = f"\n Treat {varible[0]} with {ailment_condition_treat[1]}"
+
+                        print(output_print)
+                        print(treatment_print)
 
 
