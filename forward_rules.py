@@ -10,7 +10,7 @@ class ForwardChain:
         self.variable_initialized_list = kb.ForwardChain.variable_initialized_list
 
 
-class ForwardRules:
+class ForwardRules:     
         def _init_(self, diagnosis):
              self.diagnosis= diagnosis
              self.variable_initialized_queue= Queue()
@@ -43,4 +43,14 @@ class ForwardRules:
                         print(output_print)
                         print(treatment_print)
 
-
+        def end_program(self):
+            print("\n\n\n\nThank you for using this program!")
+            exit(0)
+        
+        def initialize_forward_rule(self):
+            diagnosis_index = 0
+            for i, diagnosis_index in enumerate(self.chain_forward.diagnosis_list):
+                if diagnosis_index == self.diagnosis:
+                    diagnosis_index = i
+                    break
+            
