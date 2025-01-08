@@ -26,6 +26,7 @@ class ForwardRules:
                     variable_initialized[1]= self.chain_forward.ailment_condition[diagnosis_index][ailment_number]
                     self.chain_forward.variable_initialized_list[ailment_number] = tuple(variable_initialized)
                     self.variable_initialized_queue.put(self.chain_forward.variable_initialized_list[ailment_number])
+            self.apply_forward_chain()
 
 
         def apply_forward_chain(self):
