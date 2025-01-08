@@ -53,4 +53,5 @@ class ForwardRules:
                 if diagnosis_index == self.diagnosis:
                     diagnosis_index = i
                     break
-            
+            self.initialize_ailment(diagnosis_index)
+            self.end_program()  
