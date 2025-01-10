@@ -27,7 +27,7 @@ class Base:
         ]
 
         self.variable_initialized = self.variable_list_initializer(self.variables_list)
-
+        self.clause_variable_list = self.initialize_clause_variable_list(20, self.clause_index)
     def variable_list_initializer(self, variables_list):
         """
         The variable list initializer function returns a dictionary of variable and their initialization status,
@@ -35,3 +35,6 @@ class Base:
         """
         initialized = {variable: -1 for variable in variables_list}
         return initialized
+    
+    
+        
