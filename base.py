@@ -27,3 +27,11 @@ class Base:
         ]
 
         self.variable_initialized = self.variable_list_initializer(self.variables_list)
+
+    def variable_list_initializer(self, variables_list):
+        """
+        The variable list initializer function returns a dictionary of variable and their initialization status,
+        -1 means the variable has not been initialized, 0 means the variable is false and 1 means the variable is true
+        """
+        initialized = {variable: -1 for variable in variables_list}
+        return initialized
