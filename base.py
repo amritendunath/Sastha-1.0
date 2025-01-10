@@ -1,5 +1,6 @@
 class Base:
     def __init__(self):
+        # all possible conclusions for our program
         self.conclusion = [
              "Heart Failure", "Cardiomyopathy", "Angina", 
             "Coronary Artery Disease", "Tachycardia", "Ventricular Tachycardia"
