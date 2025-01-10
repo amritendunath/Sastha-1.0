@@ -25,3 +25,5 @@ class Base:
             self.angina_clause, self.coronary_clause, 
             self.tachycardia_clause, self.ventricular_tachycardia_clause
         ]
+
+        self.variable_initialized = self.variable_list_initializer(self.variables_list)
