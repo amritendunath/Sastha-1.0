@@ -35,6 +35,11 @@ class Base:
         """
         initialized = {variable: -1 for variable in variables_list}
         return initialized
-    
-    
-        
+
+    def initialize_clause_variable_list(self, num_rules, clause_index):
+        clause_variable_list = [0] * (num_rules * len(clause_index))
+        for i, clause in enumerate(clause_index):
+            begin_at = i * num_rules
+            for variable_index in clause:
+                clause_variable_list[begin_at + variable_index] = 1
+        return clause_variable_list
