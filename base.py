@@ -18,3 +18,10 @@ class Base:
             [1, 5, 6], [1, 5, 7], [1, 5, 9], [1, 12], [1, 6, 9], [1, 6, 7], [1, 6, 8],
             [1, 7], [1, 8, 9], [0, 16], [0, 17], [0, 7], [0, 8, 9], [1, 4, 7], [1, 4, 9]
         ]
+
+        # pushing all clauses in the clause index list for easy retrieval later
+        self.clause_index = [
+            self.heart_failure_clause, self.cardiomyopathy_clause, 
+            self.angina_clause, self.coronary_clause, 
+            self.tachycardia_clause, self.ventricular_tachycardia_clause
+        ]
