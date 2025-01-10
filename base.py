@@ -5,6 +5,8 @@ class Base:
              "Heart Failure", "Cardiomyopathy", "Angina", 
             "Coronary Artery Disease", "Tachycardia", "Ventricular Tachycardia"
         ]
+
+        # variables_list is the list of all symptoms
         self.variables_list = [
             "Rapid/Irregular Heart Beats or Heart Palpitations", "Chest Pain",
             "Persistent Shortness of Breath", "Fatigue", "Dizziness", "Lightheadedness", "Weakness", 
