@@ -1,7 +1,8 @@
 import base as b
 import forward_rules as fr
 
-def __init__(self):
+class Rules:
+    def __init__(self):
         self.final_diagnosis = ""
 
         # Rule numbers
@@ -33,4 +34,8 @@ def __init__(self):
         self.conclusion_stack = self.initialize_stack()
 
         # Initialize a knowledge_base object
-        self.current_knowledge = b.Base()           
+        self.current_knowledge = b.Base()          
+
+    def initialize_stack(self):
+        conclusion_stack = [(10, 0)]
+        return conclusion_stack 
