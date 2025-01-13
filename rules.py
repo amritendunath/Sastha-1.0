@@ -39,3 +39,7 @@ class Rules:
     def initialize_stack(self):
         conclusion_stack = [(10, 0)]
         return conclusion_stack 
+    
+    def initialize_conclusion_list(self, num_rules):
+        rules_conclusions = [(i, "diagnosis") for i in range(1, num_rules + 1)]
+        return rules_conclusions
