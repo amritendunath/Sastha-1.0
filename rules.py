@@ -43,3 +43,11 @@ class Rules:
     def initialize_conclusion_list(self, num_rules):
         rules_conclusions = [(i, "diagnosis") for i in range(1, num_rules + 1)]
         return rules_conclusions
+    
+    def initialize_rule_symptoms(self, rules, symptoms):
+        if len(rules) != len(symptoms):
+            print("Rules and symptoms size mismatch. Recheck data.")
+            return {}
+
+        rule_symptoms = {rules[i]: symptoms[i] for i in range(len(rules))}
+        return rule_symptoms    
