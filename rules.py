@@ -87,4 +87,9 @@ class Rules:
             if self.current_knowledge.variable_initialized[self.current_knowledge.variables_list[symptom]] == 0:
                 self.visited_conclusion_list.append((rule_num_to_process, "diagnosis"))
                 self.conclusion_stack.pop()
+                next_rule = rule_num_to_process + 10
 
+                if next_rule > self.rule_number[-1]:
+                    print("Diagnosis not possible at this time. Please refer to an MD.")
+                    self.end_program()
+                    return
