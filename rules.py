@@ -51,7 +51,7 @@ class Rules:
 
         rule_symptoms = {rules[i]: symptoms[i] for i in range(len(rules))}
         return rule_symptoms    
-    def conclusion_stack(self):
+    def check_conclusion_stack(self):
         if not self.conclusion_stack:
             self.conclusion_stack.append((10,0))
         return self.conclusion_stack[-1]
