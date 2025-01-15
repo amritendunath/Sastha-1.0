@@ -93,3 +93,8 @@ class Rules:
                     print("Diagnosis not possible at this time. Please refer to an MD.")
                     self.end_program()
                     return
+                
+                next_set_of_symptom = self.rule_symptoms[next_rule]
+                self.conclusion_stack.append((next_rule, next_set_of_symptom[0]))
+                self.process_response(next_rule)
+                return
