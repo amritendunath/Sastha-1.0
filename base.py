@@ -35,9 +35,12 @@ class Base:
 
         # pushing all clauses in the clause index list for easy retrieval later
         self.clause_index = [
-            self.heart_failure_clause, self.cardiomyopathy_clause, 
-            self.angina_clause, self.coronary_clause, 
-            self.tachycardia_clause, self.ventricular_tachycardia_clause
+            self.heart_failure_clause, 
+            self.cardiomyopathy_clause, 
+            self.angina_clause, 
+            self.coronary_clause, 
+            self.tachycardia_clause, 
+            self.ventricular_tachycardia_clause
         ]
 
         self.variable_initialized = self.variable_list_initializer(self.variables_list)
