@@ -51,3 +51,9 @@ class Rules:
 
         rule_symptoms = {rules[i]: symptoms[i] for i in range(len(rules))}
         return rule_symptoms    
+    
+    def update_response(self, variable_value, variable_position):
+        self.current_knowledge.variable_initialized[self.current_knowledge.variables_list[variable_position]]= variable_value
+        rule_to_process = self.check_conclusion_stack()
+        rule_num_to_process = rule_to_process[0]
+        self.process_response(rule_num_to_process)
