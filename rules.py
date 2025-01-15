@@ -111,3 +111,7 @@ class Rules:
             for each_symptom in self.rule_symptoms[rule_num_to_process]:
                 symptom_description = self.current_knowledge.variables_list[each_symptom]
                 print(symptom_description)
+
+            self.final_diagnosis = self.current_knowledge.conclusions[self.diagnosis_index[(rule_num_to_process // 10) - 1]]
+            print(f"\n\nThe patient might be suffering from {self.final_diagnosis}. Please perform appropriate tests to confirm and treat for the condition.\n\n")
+            self.end_program()
