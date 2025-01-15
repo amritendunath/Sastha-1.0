@@ -105,3 +105,9 @@ class Rules:
                 self.conclusion_stack.append((next_rule, symptom))
                 self.start_iteration()
                 return
+            
+        if next_rule == -1:
+            print("\n\nThe patient is showing the following symptoms:\n\n")
+            for each_symptom in self.rule_symptoms[rule_num_to_process]:
+                symptom_description = self.current_knowledge.variables_list[each_symptom]
+                print(symptom_description)
