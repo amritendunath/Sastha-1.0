@@ -98,3 +98,10 @@ class Rules:
                 self.conclusion_stack.append((next_rule, next_set_of_symptom[0]))
                 self.process_response(next_rule)
                 return
+
+            elif self.current_knowledge.variable_initialized[self.current_knowledge.variables_list[symptom]] == -1:
+                next_rule = rule_num_to_process
+                self.conclusion_stack.pop()
+                self.conclusion_stack.append((next_rule, symptom))
+                self.start_iteration()
+                return
