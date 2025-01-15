@@ -51,7 +51,11 @@ class Rules:
 
         rule_symptoms = {rules[i]: symptoms[i] for i in range(len(rules))}
         return rule_symptoms    
-    
+    def conclusion_stack(self):
+        if not self.conclusion_stack:
+            self.conclusion_stack.append((10,0))
+        return self.conclusion_stack[-1]
+
     def update_response(self, variable_value, variable_position):
         self.current_knowledge.variable_initialized[self.current_knowledge.variables_list[variable_position]]= variable_value
         rule_to_process = self.check_conclusion_stack()
