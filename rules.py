@@ -123,3 +123,5 @@ class Rules:
         else:
             treatment.initialize_forward_rule()        
 
+    def get_diagnosis(self):
+        return self.final_diagnosis
