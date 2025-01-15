@@ -79,5 +79,12 @@ class Rules:
         rule_to_process = self.check_conclusion_stack()
         rule_num_to_process = rule_to_process[0]
         self.process_response(rule_num_to_process)
-    
+
+    def process_response(self, rule_num_to_process):
+        next_rule = -1
+        symptoms_for_rule = self.rule_symptoms[rule_num_to_process]
+        for symptom in symptoms_for_rule:
+            if self.current_knowledge.variable_initialized[self.current_knowledge.variables_list[symptom]] == 0:
+                self.visited_conclusion_list.append((rule_num_to_process, "diagnosis"))
+                self.conclusion_stack.pop()
 
