@@ -1,3 +1,6 @@
+# An implementation of backward chaining and forward chaining in creating an
+# expert system for a hospital in diagnosing cardiovascular diseases and to
+# recommend treatment based on the diagnosis.
 import rules as fr
 class Rules:
     def __init__(self):
