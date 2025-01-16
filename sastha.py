@@ -1,3 +1,4 @@
+import rules as fr
 class Rules:
     def __init__(self):
         pass
