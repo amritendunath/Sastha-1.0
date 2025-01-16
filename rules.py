@@ -67,15 +67,11 @@ class Rules:
             condition = self.current_knowledge.variables_list[variable_index]
             response = input(f"Does the patient have {condition}? enter: Y/N\n")
 
-        # Added Lines for NLP: 77,78
-        entities = self.nlp_processor.extract_entities(response)
-        print(f"Extracted entities: {entities}")
-
         response_value = 1 if response in ["Y", "y"] else 0
         self.update_response(response_value, variable_index)
 
     def update_response(self, variable_value, variable_position):
-        self.current_knowledge.variable_initialized[self.current_knowledge.variables_list[variable_position]]= variable_value
+        self.current_knowledge.variable_initialized[self.current_knowledge.variables_list[variable_position]] = variable_value
         rule_to_process = self.check_conclusion_stack()
         rule_num_to_process = rule_to_process[0]
         self.process_response(rule_num_to_process)
