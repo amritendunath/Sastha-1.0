@@ -1,4 +1,4 @@
-#Sastha 1.0: An AI-Powered Heart Disease Diagnosis and Treatment Recommendation System
+# Sastha 1.0: An AI-Powered Heart Disease Diagnosis and Treatment Recommendation System
 This AI-driven expert system aids healthcare professionals in diagnosing heart diseases and recommending potential treatments. The system employs forward chaining to deduce the likely diagnosis based on a series of yes/no responses about patient symptoms. Once a diagnosis is determined, forward chaining suggests a tailored list of treatments.
 
 Key Features:
