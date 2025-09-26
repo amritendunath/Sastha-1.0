@@ -3,6 +3,17 @@
 ## About the Product
 This AI-driven expert system aids healthcare professionals in diagnosing heart diseases and recommending potential treatments. The system employs forward chaining to deduce the likely diagnosis based on a series of yes/no responses about patient symptoms. Once a diagnosis is determined, forward chaining suggests a tailored list of treatments.
 
+## Tech Stack
+- Language: Python
+- Rule Engine: Custom forward/backward chaining logic
+- Interface: CLI-based (planned web integration)
+
+## Roadmap
+- [x] Diagnosis via backward chaining
+- [x] Treatment recommendation via forward chaining
+- [ ] Web-based interface
+- [ ] Integration with patient record systems
+
 ## Key Features:
 Symptom-Based Diagnosis: Guides healthcare professionals through a decision-making process to identify the underlying heart condition.
 Backward Chaining Logic: Uses responses to infer the most probable diagnosis systematically.
@@ -13,3 +24,5 @@ A healthcare professional inputs patient symptoms by answering yes/no questions.
 The system processes the inputs to deduce the diagnosis.
 Based on the diagnosis, a list of possible treatments is recommended.
 This tool is intended to assist professionals, in enhancing decision-making and streamlining diagnostic workflows.
+
+
